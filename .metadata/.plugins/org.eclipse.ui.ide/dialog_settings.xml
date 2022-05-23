@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Romero\workspace-github\PROJETOFX"/>
+			<item value="C:\Users\Romero\workspace-github\Generics"/>
+			<item value="C:\Users\Romero\workspace-github\PROJETO"/>
+			<item value="C:\Users\Romero\workspace-github\interfaceHeranca"/>
+			<item value="C:\Users\Romero\workspace-github\Updowcasting"/>
+			<item value="C:\Users\Romero\Desktop\ProjetoFx"/>
+			<item value="C:\Users\Romero\workspace-github\ProjetoFx"/>
+			<item value="C:\Users\Romero\workspace-github\ProjeFx"/>
+			<item value="C:\Users\Romero\workspace-github\XXXProjeFx"/>
+			<item value="C:\Users\Romero\workspace-github\Set"/>
+			<item value="C:\Users\Romero\workspace-github\Predicado"/>
+			<item value="C:\Users\Romero\workspace-github\Pipeline"/>
+			<item value="C:\Users\Romero\workspace-github\lambda5"/>
+			<item value="C:\Users\Romero\workspace-github\lambda4"/>
+			<item value="C:\Users\Romero\workspace-github\Lambda3"/>
+			<item value="C:\Users\Romero\workspace-github\Lambda2"/>
+			<item value="C:\Users\Romero\workspace-github\Lambda"/>
+			<item value="C:\Users\Romero\workspace-github\JDBCupdate"/>
+			<item value="C:\Users\Romero\workspace-github\JDBCtransaction"/>
+			<item value="C:\Users\Romero\workspace-github\JDBCselect"/>
+			<item value="C:\Users\Romero\workspace-github\JDBCinsert"/>
+			<item value="C:\Users\Romero\workspace-github\JDBCdelet"/>
+			<item value="C:\Users\Romero\workspace-github\JDBCconectar"/>
+			<item value="C:\Users\Romero\workspace-github\JavaFx"/>
+			<item value="C:\Users\Romero\workspace-github\ED_Pilha"/>
+			<item value="C:\Users\Romero\workspace-github\ED_Fila"/>
+			<item value="C:\Users\Romero\workspace-github\ED_ARVOREAVL"/>
+			<item value="C:\Users\Romero\workspace-github\DAO_JDBC"/>
+			<item value="C:\Users\Romero\workspace-github\covarianciacontravariancia"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Romero\workspace-github\PROJETOFX"/>
+			<item value="C:\Users\Romero\workspace-github\PROJETO"/>
+			<item value="C:\Users\Romero\workspace-github\DAONEW"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>
