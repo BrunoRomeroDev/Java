@@ -6,8 +6,8 @@ import java.util.Scanner;
 class ArvoreBinariaApp {
 	public static void main(String[] args) {
 		Scanner le = new Scanner(System.in);
-		Tree arv = new Tree();
-		int opcao;
+		Arvore arv = new Arvore();
+		int opcao, qtdEle;
 		long x;
 		System.out.print("\n Programa Arvore binaria de long");
 		do {
@@ -23,9 +23,14 @@ class ArvoreBinariaApp {
 			opcao = le.nextInt();
 			switch(opcao) {
 			case 1: {
-				System.out.print("\n Informe o valor (long) -> ");
-				x = le.nextLong();
-				arv.inserir(x);
+				System.out.print("\n Informe quantos elementos (long) -> ");
+				qtdEle = le.nextInt();
+				
+				for(int i = 0; i < qtdEle; i++) {
+					x = le.nextLong();
+					arv.inserir(x);
+				}
+				
 				break;
 			}
 			case 2: {
@@ -45,10 +50,10 @@ class ArvoreBinariaApp {
 				break;
 			}	 
 			case 4: {
-				arv.caminhar();
+				arv.exibir();
 				break; 
 			}
-			} // fim switch
+			} 
 		} while(opcao != 5);
 
 	}
