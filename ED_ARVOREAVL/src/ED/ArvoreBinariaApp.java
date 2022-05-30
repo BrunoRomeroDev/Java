@@ -2,7 +2,7 @@ package ED;
 
 import java.util.Scanner;
 
-////////////////////////////////////////////////
+
 class ArvoreBinariaApp {
 	public static void main(String[] args) {
 		Scanner le = new Scanner(System.in);

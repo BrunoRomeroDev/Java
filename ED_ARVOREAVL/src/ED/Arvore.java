@@ -1,7 +1,7 @@
 package ED;
 
 public class Arvore {
-	private No root; // raiz
+	private No root; 
 
 	public Arvore() {
 	root = null;  
