@@ -8,9 +8,9 @@ public class Arvore {
 	}
 	public void inserir(long v) {
 		No no1 = new No(); 
-		no1.item = v; 
-		no1.dir = null;
-		no1.esq = null;
+		no1.setItem(v);
+		no1.setDir(null);
+		no1.setEsq(null);
 
 		if (root == null) {
 			root = no1;
@@ -20,17 +20,17 @@ public class Arvore {
 			No anterior;
 			while(true) {
 				anterior = atual;
-				if (v <= atual.item) { 
-					atual = atual.esq;
+				if (v <= atual.getItem()) { 
+					atual = atual.getEsq() ;
 					if (atual == null) {
-						anterior.esq = no1;
+						anterior.setEsq(no1) ;
 						return;
 					} 
-				}  // 
+				} 
 				else { 
-					atual = atual.dir;
+					atual = atual.getDir();
 					if (atual == null) {
-						anterior.dir = no1;
+						anterior.setDir(no1);
 						return;
 					}
 				} 
@@ -42,9 +42,10 @@ public class Arvore {
 	public No buscar(long chave) {
 		if (root == null) return null; 
 		No atual = root;  
-		while (atual.item != chave) { 
-			if(chave < atual.item ) atual = atual.esq; 
-			else atual = atual.dir; 
+		while (atual.getItem() != chave) { 
+			if(chave < atual.getItem() ) 
+				atual = atual.getEsq(); 
+			else atual = atual.getDir(); 
 			if (atual == null) return null; 
 		} 
 		return atual; 
@@ -59,37 +60,41 @@ public class Arvore {
 		boolean filho_esq = true;
 
 
-		while (atual.item != v) { 
+		while (atual.getItem() != v) { 
 			pai = atual;
-			if(v < atual.item ) { 
-				atual = atual.esq;
+			if(v < atual.getItem() ) { 
+				atual = atual.getEsq();
 				filho_esq = true; 			}
 			else { 
-				atual = atual.dir; 
+				atual = atual.getDir(); 
 				filho_esq = false; 
 			}
 			if (atual == null) return false; 
 		} 
 
 		
-		if (atual.esq == null && atual.dir == null) {
+		if (atual.esq == null && atual.getDir() == null) {
 			if (atual == root ) root = null; 
-			else if (filho_esq) pai.esq = null; 
-			else pai.dir = null; 
+			else if (filho_esq) 
+				pai.setEsq(null); 
+			else pai.setDir(null); 
 		}
 
 		
-		else if (atual.dir == null) {
+		else if (atual.getDir() == null) {
 			if (atual == root) root = atual.esq; 
-			else if (filho_esq) pai.esq = atual.esq; 
-			else pai.dir = atual.esq;
+			else if (filho_esq) 
+				pai.setEsq(atual.getEsq())  ; 
+			else pai.setDir(atual.getEsq()) ;
 		}
 
 		
 		else if (atual.esq == null) {
-			if (atual == root) root = atual.dir; 
-			else if (filho_esq) pai.esq = atual.dir; 
-			else pai.dir = atual.dir; 
+			if (atual == root) 
+				root = atual.getDir(); 
+			else if (filho_esq)
+				pai.setEsq(atual.getDir())  ; 
+			else pai.setDir(atual.getDir()) ; 
 		}
 
 		
@@ -97,9 +102,10 @@ public class Arvore {
 			No sucessor = no_sucessor(atual);
 			
 			if (atual == root) root = sucessor; 
-			else if(filho_esq) pai.esq = sucessor;
-			else pai.dir = sucessor; 
-			sucessor.esq = atual.esq; 
+			else if(filho_esq) 
+				pai.setEsq(sucessor)  ;
+			else pai.setDir(sucessor) ; 
+			sucessor.setEsq(atual.getEsq()) ; 
 			
 		}
 
@@ -110,19 +116,19 @@ public class Arvore {
 	public No no_sucessor(No apaga) { 
 		No paidosucessor = apaga;
 		No sucessor = apaga;
-		No atual = apaga.dir; 
+		No atual = apaga.getDir(); 
 
 		while (atual != null) { 
 			paidosucessor = sucessor;
 			sucessor = atual;
-			atual = atual.esq; 
+			atual = atual.getEsq(); 
 		} 
 		
-		if (sucessor != apaga.dir) { 
-			paidosucessor.esq = sucessor.dir; 
+		if (sucessor != apaga.getDir()) { 
+			paidosucessor.setEsq(sucessor.getDir())  ; 
 			
 
-			sucessor.dir = apaga.dir; 
+			sucessor.setDir(apaga.getDir()) ; 
 			
 		}
 		return sucessor;
@@ -137,29 +143,35 @@ public class Arvore {
 			System.out.print("\n Valor minimo: " + min().item);
 			System.out.println("\n Valor maximo: " + max().item);
 		}
+		
+		for(int n = 1;n< contarNos(root);n++ ){
+			System.out.println(" Nó " +root.toString() );
+			
+		}
+			
 	}
 
 
 	public int altura(No atual) {
-		if(atual == null || (atual.esq == null && atual.dir == null))
+		if(atual == null || (atual.getEsq() == null && atual.getDir() == null))
 			return 0;
 		else {
-			if (altura(atual.esq) > altura(atual.dir))
-				return ( 1 + altura(atual.esq) );
+			if (altura(atual.getEsq()) > altura(atual.getDir()))
+				return ( 1 + altura(atual.getEsq()) );
 			else
-				return ( 1 + altura(atual.dir) );
+				return ( 1 + altura(atual.getDir()) );
 		}
 	}
 
 	public int folhas(No atual) {
 		if(atual == null) return 0;
-		if(atual.esq == null && atual.dir == null) return 1;
-		return folhas(atual.esq) + folhas(atual.dir);
+		if(atual.getEsq() == null && atual.getDir() == null) return 1;
+		return folhas(atual.getEsq()) + folhas(atual.getDir());
 	}
 
 	public int contarNos(No atual) {
 		if(atual == null)  return 0;
-		else return ( 1 + contarNos(atual.esq) + contarNos(atual.dir));
+		else return ( 1 + contarNos(atual.getEsq()) + contarNos(atual.getDir()));
 	}
 
 	public No min() {
@@ -167,7 +179,7 @@ public class Arvore {
 		No anterior = null;
 		while (atual != null) {
 			anterior = atual;
-			atual = atual.esq;
+			atual = atual.getEsq();
 		}
 		return anterior;
 	}
@@ -177,7 +189,7 @@ public class Arvore {
 		No anterior = null;
 		while (atual != null) {
 			anterior = atual;
-			atual = atual.dir;
+			atual = atual.getDir();
 		}
 		return anterior;
 	}
