@@ -11,4 +11,8 @@
 			<item value="org.eclipse.wst.XMLCategory"/>
 		</list>
 	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="FileSystemImportWizard">
+	</section>
 </section>
