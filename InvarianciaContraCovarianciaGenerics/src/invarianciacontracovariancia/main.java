@@ -14,6 +14,8 @@ public class main {
 
 		//declaração e instanciação dos objetos. 
 		//Objeto Pug implementa dois parametros (generics) que é definido no momento da instaciação
+		//Generics são invariantes ou seja não admite casting tala como na declaração
+		//List<Integer> i = new ArrayList<String>(); desta forma ocorreria um erro de compilação
 		Pug pug1 = new Pug(12, "laulau");
 		Pug pug2 = new Pug("xoxo", 34);
 		PastorAlemao pa = new PastorAlemao("CHUCHU", 12);
