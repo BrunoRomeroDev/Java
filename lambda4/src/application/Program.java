@@ -65,7 +65,15 @@ public class Program {
 		.findFirst()
 		.orElse(null);
 		
+		System.out.println("-----------Filtra HD valores -----------------");
+		System.out.println(list.stream()
+				.filter(x -> x.getName() == "HD Case")
+				.findFirst()
+				.orElse(null));
 		
+		System.out.println("-----------Tudo em maiusculo -----------------");
+		List<String> list2 =  list.stream().map(a->Product.staticUpperCaseName(a)).collect(Collectors.toList());
+		list2.forEach(System.out::println);
 		
 		
 		
