@@ -75,23 +75,19 @@ public class Program {
 		List<String> list2 =  list.stream().map(a->Product.staticUpperCaseName(a)).collect(Collectors.toList());
 		list2.forEach(System.out::println);
 		
+		System.out.println("-----------Concatena Strings -----------------");
+		String teste = "";
+		List<String> stringconcat = new ArrayList<String>();
+		
+		stringconcat.add(" teste ");
+		stringconcat.add(" de ");
+		stringconcat.add(" concatenar ");
+		stringconcat.add(" Strings ");
+		
+		System.out.println(stringconcat.stream().map(s -> teste.concat(s)).collect(Collectors.toList())); 
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 	}
 }
