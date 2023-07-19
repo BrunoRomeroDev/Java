@@ -86,7 +86,7 @@ public class Program {
 		
 		System.out.println(stringconcat.stream().map(s -> teste.concat(s)).collect(Collectors.toList())); 
 		
-		System.out.println("-----------Cria um list através de um Array -----------------");
+		System.out.println("-----------Cria um list através de um Array - Trabalhando com VarArgs-----------------");
 		String text1 = "Teste";
 		String text2 = "De";
 		String text3 = "Concat";
