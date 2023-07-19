@@ -86,8 +86,35 @@ public class Program {
 		
 		System.out.println(stringconcat.stream().map(s -> teste.concat(s)).collect(Collectors.toList())); 
 		
+		System.out.println("-----------Cria um list através de um Array -----------------");
+		String text1 = "Teste";
+		String text2 = "De";
+		String text3 = "Concat";
+		String text4 = "texto";
 		
-
+		Double num1 = 12.0;
+		Double num2 = 13.0;
+		Double num3 = 14.0;
+		
+		variavel varNum = new variavel();
+		
+		List<Double> numeros = Arrays.asList(varNum.numerosEncadeados(num1,num2,num3));
+		numeros.forEach(x -> System.out.println(x));
+		
+		int v[] = { 1, 2, 3, 4, 15 };
+		List<Integer> lista = Arrays
+		    .stream(v)		    
+		    .boxed()
+		    .collect(Collectors.toList());
+		
+		lista.forEach(x -> System.out.println(x));
+		
+		System.out.println(lista);
+		
+		variavel varText = new variavel();
+		
+		List<String> s = Arrays.asList(varText.textosEncadeados(text1,text2,text3,text4));
+		System.out.println(s);
 		
 	}
 }
